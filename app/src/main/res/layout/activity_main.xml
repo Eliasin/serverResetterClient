@@ -47,7 +47,7 @@
         android:id="@+id/wifiPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="49dp"
         android:layout_marginTop="44dp"
         android:ems="10"
         android:inputType="textShortMessage"
@@ -60,21 +60,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:onClick="sendConfiguration"
         android:text="Send"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wifiSSID" />
+        app:layout_constraintTop_toBottomOf="@+id/hostToWatch" />
 
-    <TextView
-        android:id="@+id/hint"
+    <EditText
+        android:id="@+id/hostToWatch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="49dp"
-        android:text="Default IP for ESP8266 is 192.168.4.1 and port 80"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:ems="10"
+        android:inputType="textShortMessage|text"
+        android:text="Host To Watch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wifiPassword" />
+
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:text="Default server IP is 192.168.4.1, port 6554."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sendButton" />
 
